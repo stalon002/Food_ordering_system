@@ -1,7 +1,7 @@
 import React from 'react';
 import { ShoppingCart, MapPin } from 'lucide-react';
 
-const Header = ({ cartItems, toggleCart, isCartOpen }) => {
+const Header = ({ cartItems = [], toggleCart, isCartOpen }) => {
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   
   return (
